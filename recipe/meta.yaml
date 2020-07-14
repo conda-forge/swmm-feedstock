@@ -18,11 +18,14 @@ requirements:
     - {{ compiler('c') }}
     - cmake
     - make  # [not win]
-    - openmp
+    - openmp  # [not aarch64 and not ppc64le]
+    - libgomp  # [linux]
   host:
-    - openmp
+    - libgomp  # [linux]
+    - openmp  # [not aarch64 and not ppc64le]
   run:
-    - openmp
+    - libgomp  # [linux]
+    - openmp  # [not aarch64 and not ppc64le]
     - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
 
