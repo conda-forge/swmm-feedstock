@@ -1,5 +1,5 @@
 {% set name = "swmm" %}
-{% set version = "5.2.1" %}
+{% set version = "5.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/OpenWaterAnalytics/Stormwater-Management-Model/archive/v{{ version }}.tar.gz
-  sha256: abfc4f1084276b5f183e6389e2fa10243651c7869b440322ce51666e8a708d74
+  sha256: 7b7ce71d6f2aa65961cc343f037def702b7c0b743551bf8b07e5c48cb0ac1193
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
