@@ -5,8 +5,7 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       CMakeLists.txt \
       ${SRC_DIR}
 
-# rm -rf build/CMakeCache.txt
 make install -j${CPU_COUNT} ${VERBOSE_CM}
 
 mkdir -p ${PREFIX}/lib
-mv ${PREFIX}/bin/*.so* ${PREFIX}/lib
+mv ${PREFIX}/bin/*${SHLIB_EXT}* ${PREFIX}/lib
