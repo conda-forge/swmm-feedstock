@@ -5,8 +5,8 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       CMakeLists.txt \
       ${SRC_DIR}
 
-cmake --build ${SRC_DIR} --config Release
-# cmake --install $SRC_DIR -v
-mkdir -p ${PREFIX}/bin ${PREFIX}/lib
-install ${SRC_DIR}/bin/run-swmm ${PREFIX}/bin
-install ${SRC_DIR}/lib/* ${PREFIX}/lib
+# rm -rf build/CMakeCache.txt
+make install -j${CPU_COUNT} ${VERBOSE_CM}
+
+mkdir -p ${PREFIX}/lib
+mv ${PREFIX}/bin/*.so* ${PREFIX}/lib
