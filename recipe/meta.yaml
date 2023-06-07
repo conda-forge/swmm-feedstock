@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/OpenWaterAnalytics/Stormwater-Management-Model/archive/v{{ version }}.tar.gz
   url: https://github.com/pyswmm/Stormwater-Management-Model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: abfc4f1084276b5f183e6389e2fa10243651c7869b440322ce51666e8a708d74
+  sha256: 9adc18d15f77d944e162b05c97b3222dea7297f0c67ecdf2a33cc5741c8d8340
 
 build:
   number: 0
