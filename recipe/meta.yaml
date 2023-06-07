@@ -29,6 +29,11 @@ requirements:
     - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
 
+test:
+  commands:
+    - runswmm --version
+    - runswmm --help
+
 about:
   home: https://github.com/OpenWaterAnalytics/Stormwater-Management-Model
   license_family: MIT
